@@ -13,8 +13,8 @@ return new class extends Migration
     {
         Schema::create('solicitudes', function (Blueprint $table) {
             $table->id();
-            $table->unsignedBigInteger('NUE');
-            $table-> foreign('NUE')->references('NUE')->on('agremiados');
+            $table->string('NUE')->unique();
+            $table->foreign('NUE')->references('NUE')->on('agremiados')->onUpdate('cascade');
             $table->string('ruta_archivo');
             $table->timestamps();
         });

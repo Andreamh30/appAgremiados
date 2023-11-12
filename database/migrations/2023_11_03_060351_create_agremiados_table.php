@@ -18,7 +18,7 @@ return new class extends Migration
             $table->string('nombre');
             $table->string('sexo');
             $table->string('NUP');
-            $table->unsignedBigInteger('NUE');
+            $table->string('NUE')->unique();
             $table->string('RFC');
             $table->integer('NSS');
             $table->date('fecha_nacimiento');
