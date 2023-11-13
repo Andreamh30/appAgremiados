@@ -21,8 +21,8 @@ return new class extends Migration
             $table->string('NUE')->unique();
             $table->string('RFC');
             $table->integer('NSS');
-            $table->date('fecha_nacimiento');
-            $table->integer('telefono');
+            $table->string('fecha_nacimiento');
+            $table->integer('telefono'); //aceptar mas valores en telefono 
             $table->boolean('cuota');
             $table->timestamps();
         });

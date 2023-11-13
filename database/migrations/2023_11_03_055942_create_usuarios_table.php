@@ -15,8 +15,6 @@ return new class extends Migration
             $table->id();
             $table->string('NUE');
             $table->string('password');
-            $table->unsignedBigInteger('rol_id');
-            $table-> foreign('rol_id')->references('id')->on('roles');
             $table->timestamps();
         });
     }
