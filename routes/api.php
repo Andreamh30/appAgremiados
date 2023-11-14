@@ -29,7 +29,7 @@ Route::controller(UsuariosController::class)->group(function(){
 
 Route::controller(AgremiadosController::class)->group(function(){
     Route::post('newAgremiado', 'newAgremiado');
-    //Route::get('categorias', 'getCategories');
+    Route::get('agremiados', 'getAgremiados');
     //Route::get('categoria/{id}', 'getCategoryById');
     //Route::delete('eliminarCategoria/{id}', 'deleteCategoryById');
 });

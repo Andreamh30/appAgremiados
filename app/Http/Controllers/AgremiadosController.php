@@ -28,4 +28,8 @@ class AgremiadosController extends Controller
         return response($agremiado,200);
         
     }
+    public function getAgremiados(){
+        return response()-> json(agremiados::all(),200);
+    }
+
 }

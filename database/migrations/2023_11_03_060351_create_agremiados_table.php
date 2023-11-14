@@ -23,7 +23,7 @@ return new class extends Migration
             $table->integer('NSS');
             $table->string('fecha_nacimiento');
             $table->integer('telefono'); //aceptar mas valores en telefono 
-            $table->boolean('cuota');
+            $table->boolean('cuota')->default(false);
             $table->timestamps();
         });
     }
