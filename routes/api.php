@@ -22,6 +22,7 @@ Route::middleware('auth:sanctum')->get('/user', function (Request $request) {
 
 Route::controller(UsuariosController::class)->group(function(){
     Route::post('newUsuario', 'newUsuario');
+    Route::post('login', 'loginUsuario');
     //Route::get('categorias', 'getCategories');
     //Route::get('categoria/{id}', 'getCategoryById');
     //Route::delete('eliminarCategoria/{id}', 'deleteCategoryById');

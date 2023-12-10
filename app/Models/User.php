@@ -7,6 +7,7 @@ use Illuminate\Database\Eloquent\Factories\HasFactory;
 use Illuminate\Foundation\Auth\User as Authenticatable;
 use Illuminate\Notifications\Notifiable;
 use Laravel\Sanctum\HasApiTokens;
+use Spatie\Permission\Traits\HasRoles;
 
 class User extends Authenticatable
 {
@@ -17,10 +18,23 @@ class User extends Authenticatable
      *
      * @var array<int, string>
      */
-    protected $fillable = [
-        'name',
-        'email',
+    
+    use HasRoles;
+
+    protected $fillable=[
+        'NUE',
         'password',
+        'a_paterno',
+        'a_materno',
+        'nombre',
+        'sexo',
+        'NUP',
+        'NUE',
+        'RFC',
+        'NSS',
+        'fecha_nacimiento',
+        'telefono',
+        'cuota',
     ];
 
     /**
