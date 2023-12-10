@@ -12,10 +12,10 @@ class UsuariosController extends Controller
     //
     public function newUsuario(Request $req){
         
-        $usuario= usuarios:: create([
-            'NUE'=>$req->NUE,
-            'password'=>$req->password
-        ])->assignRole('user');
+        $usuario= usuarios:: create($req->only([
+            'NUE',
+            'password'
+        ]))->assignRole('user');
         return response($usuario,200);
         
     }

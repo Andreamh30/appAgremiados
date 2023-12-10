@@ -13,6 +13,17 @@ class usuarios extends Model
 
     protected $fillable=[
         'NUE',
-        'password'
+        'password',
+        'a_paterno',
+        'a_materno',
+        'nombre',
+        'sexo',
+        'NUP',
+        'NUE',
+        'RFC',
+        'NSS',
+        'fecha_nacimiento',
+        'telefono',
+        'cuota',
     ];
 }
